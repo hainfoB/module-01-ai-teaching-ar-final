@@ -6,7 +6,10 @@
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta content="#102a53" name="theme-color"/>
 <meta content="الجلسة الأولى، الوحدة 01: مبدأ CONTEXTE في البرومبتات التربوية — 150 دقيقة." name="description"/>
-<title>&lt;span data-i18n="ui001"&gt;الجلسة 01 | مبدأ CONTEXTE للمعلم&lt;/span&gt;</title>
+<title>الجلسة 01 | مبدأ CONTEXTE للمعلم</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;family=Noto+Sans+Arabic:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
 <style>
     /* المنهاج التنفيذي الأزرق: جلسة عربية RTL مستقلة. البرتقالي للفعل والتحقق فقط. */
     :root{--navy:#102a53;--navy2:#173f6c;--orange:#f97316;--orange2:#e95e0b;--ivory:#f8f5f0;--paper:#fffdf9;--sky:#eaf2f8;--ink:#142a44;--muted:#60758d;--line:#d8e2ea;--ease:cubic-bezier(.23,1,.32,1)}
@@ -298,6 +301,140 @@ footer p, footer li, footer span, footer a { font-size:21px !important; line-hei
   .catalogue-actions button, .prompt-langs button, .status span, .builder-top, .preview-topic, .map-node strong, .map-node small, .map-check, .subject h3, .subject-head small { font-size:19px !important; }
   footer p, footer li, footer span, footer a { font-size:19px !important; }
 }
+
+/* Système final UI/UX — lecture maximale pour projection, sans débordement. */
+:root {
+  --font-ar: "Noto Sans Arabic", Tahoma, Arial, sans-serif;
+  --font-latin: Inter, "Segoe UI", Arial, sans-serif;
+  --body-ar: clamp(34px, 2.25vw, 40px);
+  --body-latin: clamp(30px, 1.85vw, 35px);
+  --ease-out: cubic-bezier(.23,1,.32,1);
+}
+html[lang="ar"] body, html[lang="ar"] button, html[lang="ar"] input, html[lang="ar"] summary { font-family:var(--font-ar) !important; }
+html[lang="fr"] body, html[lang="fr"] button, html[lang="fr"] input, html[lang="fr"] summary,
+html[lang="en"] body, html[lang="en"] button, html[lang="en"] input, html[lang="en"] summary { font-family:var(--font-latin) !important; }
+html[lang="ar"] main, html[lang="ar"] main *, html[lang="ar"] .portfolio-section, html[lang="ar"] .portfolio-section * { font-family:var(--font-ar) !important; }
+html[lang="fr"] main, html[lang="fr"] main *, html[lang="fr"] .portfolio-section, html[lang="fr"] .portfolio-section *,
+html[lang="en"] main, html[lang="en"] main *, html[lang="en"] .portfolio-section, html[lang="en"] .portfolio-section * { font-family:var(--font-latin) !important; }
+html, body { overflow-x:hidden !important; text-rendering:optimizeLegibility; }
+body { letter-spacing:0; }
+.wrap { width:min(1400px, calc(100% - 72px)); }
+main, main *, .portfolio-section, .portfolio-section * { min-width:0; }
+main p, main li, main td, main blockquote, main summary, main label,
+.portfolio-section p, .portfolio-section li { overflow-wrap:anywhere; word-break:normal; }
+html[lang="ar"] main p, html[lang="ar"] main li, html[lang="ar"] main blockquote, html[lang="ar"] main label,
+html[lang="ar"] .portfolio-section p, html[lang="ar"] .portfolio-section li { font-size:var(--body-ar) !important; line-height:1.92 !important; }
+html[lang="fr"] main p, html[lang="fr"] main li, html[lang="fr"] main blockquote, html[lang="fr"] main label,
+html[lang="en"] main p, html[lang="en"] main li, html[lang="en"] main blockquote, html[lang="en"] main label,
+html[lang="fr"] .portfolio-section p, html[lang="fr"] .portfolio-section li,
+html[lang="en"] .portfolio-section p, html[lang="en"] .portfolio-section li { font-size:var(--body-latin) !important; line-height:1.78 !important; }
+main h1 { font-size:clamp(76px, 8vw, 128px) !important; line-height:1.18 !important; letter-spacing:-.035em !important; }
+main h2, .profile-hero h2 { font-size:clamp(64px, 6.3vw, 104px) !important; line-height:1.28 !important; letter-spacing:-.028em !important; }
+main h3, main h4, .portfolio-section h3, .portfolio-section h4 { font-size:clamp(36px, 3vw, 48px) !important; line-height:1.42 !important; }
+.section-tag, .section-label, .eyebrow, .kicker { font-size:26px !important; line-height:1.65 !important; }
+.section-tag b, .section-tag span, .section-tag::after { font-size:24px !important; white-space:normal !important; }
+main button, main .action, main .ghost, main .history-jump, main .copy,
+.catalogue-actions button, .prompt-langs button, .filters button { min-height:56px; font-size:26px !important; line-height:1.45 !important; padding:13px 19px; white-space:normal; }
+.top { min-height:96px; height:auto; padding-block:15px; }
+.brand-name b { font-size:24px !important; }
+.brand-name small, .stamp small { font-size:16px !important; }
+.stamp b { font-size:22px !important; }
+.global-language button, .hamburger, .top .action { font-size:22px !important; min-height:48px; }
+.hero { min-height:760px; grid-template-columns:minmax(0, 1.08fr) minmax(510px, .92fr); gap:74px; padding-block:88px 74px; }
+.hero-copy > p { max-width:760px; }
+.hero-actions { flex-wrap:wrap; }
+.history-jump { border:3px solid var(--orange); background:#fff7ed; box-shadow:0 12px 28px rgb(0 0 0 / 18%); font-weight:900; }
+.session-strip { min-height:150px; }
+.session-strip b { font-size:70px !important; }
+.session-strip span, .session-strip small, .outcome b, .outcome small { font-size:27px !important; line-height:1.55 !important; }
+.principle-grid, .objectives-grid, .schedule-head, .framework-head, .lab-head, .builder, .exit-grid,
+.tri-head, .ethics-head, .catalogue-head, .summative-head, .history-head, .portfolio-grid { gap:70px; }
+.context-grid, .context-deep-grid { grid-template-columns:repeat(2, minmax(0, 1fr)); gap:24px; }
+.context-card, .context-deep-card, .ethics-card, .assessment-card, .subject, .foundation article, .step { height:auto !important; min-height:0 !important; padding:30px !important; }
+.ethics-grid, .assessment-rules, .assessment-tri, .assessment-analysis, .tri-intro { grid-template-columns:repeat(2, minmax(0, 1fr)); gap:24px; }
+.assessment-tri > :last-child, .tri-intro > :last-child { grid-column:1 / -1; }
+.examples { grid-template-columns:1fr; gap:22px; }
+.example { grid-template-columns:48px minmax(0,1fr) auto; gap:18px; padding:20px 0; }
+.example p, .catalogue-note, .tri-intro p, .ethics-tri > div, .assessment-language p,
+.assessment-analysis p, .assessment-analysis li, .correction p, .assessment-footer { font-size:28px !important; line-height:1.82 !important; }
+.catalogue-text, .output { font-size:30px !important; line-height:1.9 !important; padding:28px !important; }
+.catalogue-item summary { grid-template-columns:70px minmax(0,1fr) auto; gap:20px; padding:24px 26px; }
+.catalogue-index, .catalogue-item summary b, .catalogue-item summary small, .catalogue-item summary span:last-child,
+.catalogue-level, .catalogue-subject { font-size:26px !important; line-height:1.55 !important; }
+.tri-schedule, .score-table { overflow-x:auto; -webkit-overflow-scrolling:touch; }
+.tri-schedule th, .tri-schedule td, .score-table th, .score-table td { font-size:27px !important; line-height:1.65 !important; padding:22px !important; }
+.history-section { background:linear-gradient(180deg,#fff8ef 0%,#f4f7fa 45%,#fff 100%); border-block:8px solid var(--orange); padding:110px 0 100px; }
+.history-head { background:var(--navy); color:#fff; padding:42px; border-radius:24px; box-shadow:0 22px 55px rgb(16 42 83 / 18%); }
+.history-head > p { color:#d7e6f1 !important; }
+.history-head h2 { font-size:clamp(68px, 6vw, 108px) !important; line-height:1.25 !important; }
+.history-callout { border-width:4px; border-radius:18px; box-shadow:0 15px 34px rgb(16 42 83 / 10%); }
+.history-step { grid-template-columns:180px 30px minmax(0,1fr); gap:28px; padding:30px 0; }
+.history-step time, .history-takeaway span, .history-sources span, .history-sources a { font-size:26px !important; line-height:1.55 !important; }
+.history-copy p { font-size:34px !important; line-height:1.92 !important; }
+.history-takeaway strong { font-size:36px !important; line-height:1.6 !important; }
+.history-sources { flex-wrap:wrap; }
+.hero-map, .hero-map * { font-family:var(--font-ar) !important; }
+.hero-map .map-node strong { font-size:22px !important; }
+.hero-map .map-node small, .hero-map .map-check { font-size:18px !important; }
+.hero-map .map-letter { font-size:20px !important; }
+section:not(.hero) { animation:none !important; }
+@media (prefers-reduced-motion:no-preference) {
+  .motion-section { opacity:0; transform:translateY(38px); transition:opacity .72s var(--ease-out), transform .72s var(--ease-out); }
+  .motion-section.is-visible { opacity:1; transform:translateY(0); }
+  .motion-section .motion-item { opacity:0; transform:translateY(24px); transition:opacity .58s var(--ease-out), transform .58s var(--ease-out); }
+  .motion-section.is-visible .motion-item { opacity:1; transform:translateY(0); }
+  .motion-section.is-visible .motion-item:nth-child(2) { transition-delay:60ms; }
+  .motion-section.is-visible .motion-item:nth-child(3) { transition-delay:120ms; }
+  .motion-section.is-visible .motion-item:nth-child(4) { transition-delay:180ms; }
+}
+@media (max-width:1200px) {
+  .wrap { width:min(100% - 48px, 1120px); }
+  .hero { grid-template-columns:1fr; min-height:auto; }
+  .hero-copy, .hero-art { width:100%; }
+  .principle-grid, .objectives-grid, .schedule-head, .framework-head, .contrast, .lab-head, .builder, .exit-grid,
+  .tri-head, .ethics-head, .catalogue-head, .summative-head, .history-head, .portfolio-grid { grid-template-columns:1fr !important; gap:34px !important; }
+  .top > nav[aria-label="التنقل الرئيسي"] { display:none !important; }
+  .hamburger { display:grid !important; place-items:center; }
+}
+@media (max-width:760px) {
+  :root { --body-ar:30px; --body-latin:27px; }
+  .wrap { width:calc(100% - 32px) !important; }
+  .top { min-height:88px; padding:12px 14px; }
+  .brand-name b { font-size:20px !important; }
+  .brand-name small, .stamp { display:none !important; }
+  .global-language { left:62px; }
+  .global-language button, .hamburger { font-size:18px !important; min-width:46px; min-height:46px; }
+  .hero { padding:64px 18px 48px; }
+  main h1 { font-size:clamp(58px, 16vw, 74px) !important; }
+  main h2, .profile-hero h2 { font-size:clamp(50px, 13vw, 66px) !important; }
+  main h3, main h4, .portfolio-section h3, .portfolio-section h4 { font-size:34px !important; }
+  .section-tag, .section-tag b, .section-tag span, .section-tag::after, .kicker { font-size:20px !important; }
+  .hero-actions { align-items:stretch; }
+  .hero-actions > *, .history-jump { width:100%; justify-content:center; text-align:center; }
+  .hero-art { min-height:440px !important; }
+  .session-strip { grid-template-columns:1fr !important; padding:18px 16px; }
+  .session-strip > div, .outcome { grid-column:auto !important; border:0 !important; border-bottom:1px solid #e3e8ed !important; padding:20px 10px !important; }
+  .session-strip b { font-size:54px !important; }
+  .session-strip span, .session-strip small, .outcome b, .outcome small { font-size:23px !important; }
+  .context-grid, .context-deep-grid, .ethics-grid, .assessment-rules, .assessment-tri, .assessment-analysis, .tri-intro, .ethics-tri, .rubric { grid-template-columns:1fr !important; }
+  .assessment-tri > :last-child, .tri-intro > :last-child { grid-column:auto; }
+  .context-card, .context-deep-card, .ethics-card, .assessment-card, .subject, .foundation article, .step { padding:24px !important; }
+  .example { grid-template-columns:38px minmax(0,1fr); }
+  .example button { grid-column:2; justify-self:start; }
+  .catalogue-item summary { grid-template-columns:48px minmax(0,1fr); }
+  .catalogue-item summary span:last-child { grid-column:2; }
+  .catalogue-text, .output { font-size:26px !important; line-height:1.88 !important; padding:22px !important; }
+  .example p, .catalogue-note, .tri-intro p, .ethics-tri > div, .assessment-language p,
+  .assessment-analysis p, .assessment-analysis li, .correction p, .assessment-footer { font-size:25px !important; }
+  .history-section { padding:72px 0 66px; }
+  .history-head { padding:28px 22px; border-radius:18px; }
+  .history-head h2 { font-size:54px !important; }
+  .history-step { grid-template-columns:1fr; gap:10px; padding:30px 0; }
+  .history-dot { display:none; }
+  .history-copy p { font-size:30px !important; }
+  .history-takeaway strong { font-size:31px !important; }
+  .history-step time, .history-takeaway span, .history-sources span, .history-sources a { font-size:23px !important; }
+}
 </style>
 </head>
 <body>
@@ -306,7 +443,7 @@ footer p, footer li, footer span, footer a { font-size:21px !important; line-hei
 <nav aria-label="التنقل الرئيسي"><a class="history-nav-link" href="#history">التاريخ · Histoire · History</a><a href="#principle"><span data-i18n="ui005">المبدأ</span></a><a href="#schedule"><span data-i18n="ui006">150 دقيقة</span></a><a href="#framework">CONTEXTE</a><a href="#ethics"><span data-i18n="ui007">الأخلاق</span></a><a href="#catalogue"><span data-i18n="ui008">الكتالوج</span></a><a href="#sources"><span data-i18n="ui009">المراجع</span></a><a href="#portfolio">CV &amp; Portfolio</a></nav>
 <a class="action" href="#lab"><span data-i18n="ui010">طبّق الآن</span> <span>←</span></a><div aria-label="Language selector" class="global-language" role="group"><button class="active" data-global-lang="ar" type="button">AR</button><button data-global-lang="fr" type="button">FR</button><button data-global-lang="en" type="button">EN</button></div>
 <button aria-expanded="false" aria-label="فتح القائمة" class="hamburger" id="menuButton">☰</button>
-<nav aria-label="التنقل على الهاتف" class="mobile-nav" id="mobileNav"><a href="#principle"><span data-i18n="ui011">المبدأ</span></a><a href="#schedule"><span data-i18n="ui012">خطة 150 دقيقة</span></a><a href="#framework">CONTEXTE</a><a href="#ethics"><span data-i18n="ui013">الأخلاق</span></a><a href="#catalogue"><span data-i18n="ui014">الكتالوج</span></a><a href="#lab"><span data-i18n="ui015">المختبر</span></a><a href="#portfolio">CV &amp; Portfolio</a></nav>
+<nav aria-label="التنقل على الهاتف" class="mobile-nav" id="mobileNav"><a class="history-nav-link" data-history-nav href="#history">تاريخ الذكاء الاصطناعي</a><a href="#principle"><span data-i18n="ui011">المبدأ</span></a><a href="#schedule"><span data-i18n="ui012">خطة 150 دقيقة</span></a><a href="#framework">CONTEXTE</a><a href="#ethics"><span data-i18n="ui013">الأخلاق</span></a><a href="#catalogue"><span data-i18n="ui014">الكتالوج</span></a><a href="#lab"><span data-i18n="ui015">المختبر</span></a><a href="#portfolio">CV &amp; Portfolio</a></nav>
 </header>
 <main id="top">
 <section class="hero">
@@ -2704,6 +2841,63 @@ Verification: Check that the trainee does not substitute the real safety sheet w
   }
   document.querySelectorAll('[data-global-lang]').forEach(button=>button.addEventListener('click',()=>syncHistory(button.dataset.globalLang)));
   syncHistory('ar');
+})();
+</script>
+<script>
+(() => {
+  const history = document.getElementById('history');
+  const sessionStrip = document.querySelector('.session-strip');
+  if (history && sessionStrip && sessionStrip.nextElementSibling !== history) {
+    sessionStrip.insertAdjacentElement('afterend', history);
+  }
+  if (history && window.location.hash === '#history') {
+    history.classList.add('is-visible');
+    const openHistory = () => history.scrollIntoView({ block: 'start' });
+    requestAnimationFrame(openHistory);
+    setTimeout(openHistory, 320);
+    if (document.fonts?.ready) document.fonts.ready.then(openHistory);
+  }
+
+  const historyNavLabels = {
+    ar: 'تاريخ الذكاء الاصطناعي',
+    fr: 'Histoire de l’IA',
+    en: 'History of AI'
+  };
+  const syncHistoryNav = (lang) => {
+    document.querySelectorAll('[data-history-nav]').forEach((link) => {
+      link.textContent = historyNavLabels[lang] || historyNavLabels.ar;
+    });
+  };
+  document.querySelectorAll('[data-global-lang]').forEach((button) => {
+    button.addEventListener('click', () => syncHistoryNav(button.dataset.globalLang));
+  });
+  syncHistoryNav(document.documentElement.lang || 'ar');
+
+  const sections = [
+    ...document.querySelectorAll('main > section:not(.hero)'),
+    ...document.querySelectorAll('.portfolio-section'),
+    ...document.querySelectorAll('body > footer')
+  ];
+  sections.forEach((section) => {
+    section.classList.add('motion-section');
+    [...section.children].slice(0, 4).forEach((child) => child.classList.add('motion-item'));
+  });
+
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches || !('IntersectionObserver' in window)) {
+    sections.forEach((section) => section.classList.add('is-visible'));
+    return;
+  }
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.035, rootMargin: '0px 0px -7% 0px' });
+
+  sections.forEach((section) => observer.observe(section));
 })();
 </script>
 </body>

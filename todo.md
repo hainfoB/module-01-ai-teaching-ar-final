@@ -93,3 +93,13 @@ La version arabe actualisée, puis les versions française et anglaise, ont ét�
 - [x] Ajuster les grilles, cartes, boutons et espacements pour absorber la typographie agrandie sur bureau et mobile.
 - [x] Contrôler AR/FR/EN, les 175 prompts, l’historique et la navigation après la hausse typographique.
 - [x] Mettre à jour la version GitHub privée et le checkpoint de livraison après validation.
+
+## Refonte finale UI/UX — lisibilité maximale
+
+- [x] Choisir une typographie arabe et latine simple, élégante et très lisible, avec des polices de secours locales.
+- [x] Augmenter encore tous les textes de lecture, les prompts, les tableaux et les commandes sans débordement horizontal.
+- [x] Adapter les grilles et les cartes aux grands caractères sur mobile, ordinateur et projection.
+- [x] Rendre la capsule « Histoire de l’IA générative — 5 minutes » immédiatement visible dans AR, FR et EN.
+- [x] Ajouter des transitions inter-sections fluides limitées à transform et opacity, avec prefers-reduced-motion.
+- [x] Vérifier les 175 prompts, les interactions, les trois langues et les largeurs critiques avant livraison.
+- [x] Enregistrer un nouveau checkpoint et synchroniser le dépôt GitHub privé.
