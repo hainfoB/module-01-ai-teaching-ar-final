@@ -86,3 +86,10 @@ La version arabe actualisée, puis les versions française et anglaise, ont ét�
 - [x] Ajouter des animations de transition entre les sections, avec respect de prefers-reduced-motion.
 - [x] Rendre la section « Histoire de l’IA générative — 5 minutes » visible et accessible dans les trois langues.
 - [x] Vérifier desktop/mobile et remettre le fichier HTML mis à jour.
+
+## Nouvelle demande — lisibilité à 150 %
+
+- [x] Augmenter la taille générale des textes d’au moins 150 %, avec priorité à l’arabe, sans débordement horizontal.
+- [x] Ajuster les grilles, cartes, boutons et espacements pour absorber la typographie agrandie sur bureau et mobile.
+- [x] Contrôler AR/FR/EN, les 175 prompts, l’historique et la navigation après la hausse typographique.
+- [x] Mettre à jour la version GitHub privée et le checkpoint de livraison après validation.
