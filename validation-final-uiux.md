@@ -17,3 +17,7 @@ Les captures de contrôle montrent un premier écran lisible à 1440 × 900 et �
 ## Vérification des interactions
 
 Le filtre a été basculé vers **Formation professionnelle** puis vers une matière précise : cinq exemples ont été rendus comme attendu. Une entrée du catalogue s’ouvre correctement. Le retour visuel de copie française devient « ✓ Copié » lorsque l’écriture presse-papiers aboutit. Le menu compact s’ouvre et se ferme, son lien historique met l’URL à `#history`, puis la capsule atteint l’opacité 1 après sa transition. Aucun débordement horizontal n’apparaît après ces opérations.
+
+## Rééquilibrage typographique et mouvement
+
+La nouvelle échelle mesurée est de 19 px pour les paragraphes arabes, 17 px pour les paragraphes français et anglais, et 18 px pour les prompts complets sur la largeur desktop de contrôle. Le titre principal reste hiérarchisé à environ 67,8 px. La transition inter-section dure 420 ms avec un déplacement initial limité à 16 px ; les éléments internes sont décalés de 45 ms. Les trois langues restent sans débordement, utilisent Noto Sans Arabic ou Inter selon le mode, conservent les 175 prompts, et placent l’histoire immédiatement après la synthèse.

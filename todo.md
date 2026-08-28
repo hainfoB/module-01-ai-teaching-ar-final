@@ -103,3 +103,13 @@ La version arabe actualisée, puis les versions française et anglaise, ont ét�
 - [x] Ajouter des transitions inter-sections fluides limitées à transform et opacity, avec prefers-reduced-motion.
 - [x] Vérifier les 175 prompts, les interactions, les trois langues et les largeurs critiques avant livraison.
 - [x] Enregistrer un nouveau checkpoint et synchroniser le dépôt GitHub privé.
+
+## Rééquilibrage final — typographie et transitions
+
+- [x] Réduire d’environ 50 % l’échelle typographique XXL dans les trois langues.
+- [x] Maintenir une hiérarchie lisible pour titres, paragraphes, prompts, tableaux et commandes.
+- [x] Reconcevoir les transitions inter-sections avec une durée courte, un faible déplacement et une cadence professionnelle.
+- [x] Harmoniser les micro-interactions des cartes et boutons sans animation de mise en page.
+- [x] Respecter `prefers-reduced-motion` et éviter tout contenu invisible en cas d’échec JavaScript.
+- [x] Valider les largeurs mobile et ordinateur, les langues AR/FR/EN, l’histoire et les 175 prompts.
+- [x] Créer un nouveau checkpoint et synchroniser le dépôt GitHub privé.
